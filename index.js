@@ -36,3 +36,12 @@ app.post("/webhook", (request, response) => {
 app.listen(process.env.PORT || 8080, () => {
   console.log("Server is listening on port 8080");
 });
+
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/html/basic.html')
+});
+
+app.get('/advance', (req, res) => {
+  res.sendFile(__dirname + '/html/adavanced.html')
+});
